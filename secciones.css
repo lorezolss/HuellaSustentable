@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------------------- estilos del header -----------------------------------------*/
+
+header{
+    display: flex;
+    /*background-image: url('images/ImagenFondo.jpg');*/
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-size: 100%;
+
+}
+
+header >h1 {
+    font-style: oblique;
+    color: green;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img { 
+    margin-right: 15px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menu >li a{
+    text-decoration: none;
+    padding: 10px;
+    color: teal;
+}
+
+nav ul {
+    list-style: none;
+    font-weight: bold;
+
+}
+
+nav ul li a:hover {
+    background: #eca023;
+    color: #fff;
+  }
+
+/*---------------------------------- estilos del body -------------------------------------- */
+.container {
+    width: 95%;
+    position: relative;
+
+    margin: 20px 20px 15px 20px;
+    padding: 20px 20px 15px 20px;
+}
+
+.container h1{
+    font-style: oblique;
+    color: green;
+    border-bottom: 1px solid green;
+    padding: 20px 10px;
+}
+
+h2{
+    text-align: center;
+    color: green;
+    border-bottom: 1px solid green;
+    padding: 20px 10px;
+}
+
+p{
+    text-align: justify;
+}
+
+p::first-letter {
+    font-size: 30px;
+    color: green;
+}
+
+.button {
+    font-size: 20px;
+    color: green;
+    border-bottom: 1px solid green;
+}
+
+
+/* ------------------------------------ estilos del footer -------------------------------- */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-size: 100%;
+    min-height: 70px;
+
+}
+
+footer >div >h3 {
+    margin-left: 30px;
+    font-style: italic;
+    color: #888;
+}
+
+
+footer a{
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer nav {
+    width: 220px;
+    margin: 30px;
+}
+

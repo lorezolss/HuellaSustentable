@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------- estilos del header -----------------------------------------*/
+
+header{
+    display: flex;
+    /*background-image: url('images/ImagenFondo.jpg');*/
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+h1 {
+    font-style: oblique;
+    color: green;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img { 
+    margin-right: 15px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menu >li a{
+    text-decoration: none;
+    padding: 10px;
+    color: teal;
+}
+
+nav ul {
+    list-style: none;
+    font-weight: bold;
+
+}
+
+nav ul li a:hover {
+    background: #eca023;
+    color: #fff;
+  }
+
+/*---------------------------------- estilos del body -------------------------------------- */
+
+body {
+    background-color: rgb(181, 190, 199);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: "encabezado encabezado encabezado "
+                        "contenido contenido sidebar"
+                        "hogar ciudad naturaleza "
+                        "pie pie pie ";
+
+}
+
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor > div,
+.contenedor .pie {
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contenedor .encabezado {
+    background: url(images\ImagenFondo.jpg);
+    grid-area: encabezado;
+
+}
+
+.contenedor .contenido{
+    grid-area: contenido;
+    background-color: #fff;
+}
+
+.contenedor .sidebar{
+    grid-area: sidebar;
+    background-color: rgb(211, 198, 15);
+    color: #fff;
+    padding: 20px;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sidebar >div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:  space-around;
+     
+}
+.sidebar >p,
+.hogar >p,
+.ciudad >p,
+.naturaleza >p {
+    text-align: center;
+    text-decoration: double;
+}
+
+.contenedor .hogar,
+.contenedor .ciudad,
+.contenedor .naturaleza {
+    background-color: rgba(43, 143, 43, 0.7);
+    min-height: 100px;
+    color: #fff;
+
+}
+
+.contenedor .hogar {
+    grid-area: hogar;
+}
+
+.contenedor .ciudad {
+    grid-area: ciudad;
+}
+
+.contenedor .naturaleza {
+    grid-area: naturaleza;
+}
+
+.contenedor .pie {
+    background: url(images\ImagenFondo.jpg);
+    grid-area: pie;
+}
+
+.hogar >div,
+.ciudad >div,
+.naturaleza >div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.sidebar {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly ;
+
+}
+
+.sidebar >a {
+    text-decoration: none;
+    padding: 10px;
+    color: teal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:  space-between;
+}
+
+
+
+
+/* ------------------------------------ estilos del footer -------------------------------- */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+footer >div >h3 {
+    font-style: italic;
+}
+
+
+footer a{
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer nav {
+    width: 220px;
+    margin: 0 auto;
+}
+
+/* ------------------------------ responsive --------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado"
+                            "contenido contenido contenido"
+                            "hogar hogar ciudad"
+                            "naturaleza naturaleza sidebar "
+                            "pie pie pie";
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado encabezado"
+                            "contenido contenido contenido"
+                            "hogar hogar hogar"
+                            "ciudad ciudad ciudad"
+                            "naturaleza naturaleza naturaleza"
+                            "sidebar sidebar sidebar"
+                            "pie pie pie";
+    }
+
+}
